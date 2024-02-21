@@ -1,7 +1,15 @@
-export function App() {
+import { CurrentlyPlaying } from "./CurrentlyPlaying";
+import { Navbar } from "./Navbar";
+import { Playlist } from "./Playlist";
+
+export function App(): JSX.Element {
   return (
     <>
-      <h1>This is the App component</h1>
+      <Navbar />
+      <div className="content">
+        <Playlist />
+        <CurrentlyPlaying />
+      </div>
     </>
   );
 }

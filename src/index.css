@@ -1,0 +1,25 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  margin: auto;
+  margin-top: 48px;
+  width: 880px;
+  height: 880px;
+
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  display: flex;
+  height: 800px;
+}
+
+@media only screen and (max-width: 440px) {
+  #root {
+    width: 440px;
+    max-height: 100vh;
+  }
+}

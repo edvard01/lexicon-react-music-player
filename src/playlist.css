@@ -1,0 +1,37 @@
+.playlist {
+  width: 50%;
+  height: 100%;
+
+  background-color: lightblue;
+}
+
+.playlist ul {
+  margin: 0;
+  padding: 0;
+}
+
+.playlist ul li {
+  margin: auto;
+  width: 90%;
+  height: 64px;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlist ul li .song-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist ul li .song-text h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.playlist ul li .song-text p {
+  margin: 0;
+  padding: 0;
+}
