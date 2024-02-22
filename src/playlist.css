@@ -9,6 +9,8 @@
 .playlist ul {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
 .playlist ul li {
@@ -16,32 +18,40 @@
   width: 95%;
   height: 64px;
 
+  border-bottom: 0.1rem solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playlist ul li .li-content {
   display: flex;
 
   justify-content: space-between;
   align-items: center;
-
-  border-bottom: 0.1rem solid black;
+  height: 100%;
+  width: 80%;
 }
 
-.playlist ul li .song-text {
+.playlist ul li .li-content .song-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.playlist ul li .song-text h4 {
+.playlist ul li .li-content .song-text h4 {
   margin: 0;
   padding: 0;
 }
 
-.playlist ul li .song-text p {
+.playlist ul li .li-content .song-text p {
   margin: 0;
   padding: 0;
 }
 
-.playlist ul li img {
+.playlist ul li .li-content img {
   height: 46px;
   width: 46px;
 }
