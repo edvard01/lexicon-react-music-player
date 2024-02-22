@@ -2,7 +2,8 @@
   width: 50%;
   height: 100%;
 
-  background-color: lightblue;
+  background-color: white;
+  border-right: 0.1rem solid black;
 }
 
 .playlist ul {
@@ -12,18 +13,22 @@
 
 .playlist ul li {
   margin: auto;
-  width: 90%;
+  width: 95%;
   height: 64px;
 
   display: flex;
 
   justify-content: space-between;
   align-items: center;
+
+  border-bottom: 0.1rem solid black;
 }
 
 .playlist ul li .song-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .playlist ul li .song-text h4 {
@@ -34,4 +39,9 @@
 .playlist ul li .song-text p {
   margin: 0;
   padding: 0;
+}
+
+.playlist ul li img {
+  height: 46px;
+  width: 46px;
 }

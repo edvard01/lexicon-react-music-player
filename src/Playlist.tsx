@@ -6,7 +6,7 @@ export function Playlist(): JSX.Element {
       <div className="playlist">
         <ul>
           <li>
-            <img src="" alt="IMG" />
+            <img src="src\assets\WageWarManic.jpg" alt="IMG" />
             <span className="song-text">
               <h4>Song Title</h4>
               <p>artist</p>

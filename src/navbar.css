@@ -5,6 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  border-bottom: 0.1rem solid black;
 }
 
 .navbar .nav-links {
