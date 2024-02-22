@@ -1,6 +1,14 @@
 import "./currentlyPlaying.css";
 
-export function CurrentlyPlaying(): JSX.Element {
+interface ICurrentlyPlayingProps {
+  song: string;
+  artist: string;
+}
+
+export function CurrentlyPlaying({
+  song,
+  artist,
+}: ICurrentlyPlayingProps): JSX.Element {
   return (
     <>
       <div className="currently-playing">
@@ -10,8 +18,8 @@ export function CurrentlyPlaying(): JSX.Element {
           <div className="song-info">
             <span className="material-symbols-outlined"> add_circle </span>
             <span className="text-area">
-              <h4>Song Title</h4>
-              <p>Album name</p>
+              <h4>{song}</h4>
+              <p>{artist}</p>
             </span>
             <span className="material-symbols-outlined"> favorite </span>
           </div>
