@@ -1,6 +1,14 @@
 import "./playlist.css";
 
-export function Playlist(): JSX.Element {
+interface IPlaylistProps {
+  updateSong: (newSong: string) => void;
+  updateArtist: (newArtist: string) => void;
+}
+
+export function Playlist({
+  updateSong,
+  updateArtist,
+}: IPlaylistProps): JSX.Element {
   function songClick(event: React.MouseEvent<HTMLElement>) {
     const target = event.target as HTMLElement;
 
@@ -9,14 +17,18 @@ export function Playlist(): JSX.Element {
       const songTitle = newTarget.querySelector("#song-title")?.innerHTML;
       const songAuthor = newTarget.querySelector("#song-author")?.innerHTML;
 
-      console.log(songTitle, " - Title");
-      console.log(songAuthor, " - Author");
+      if (typeof songTitle === "string" && typeof songAuthor === "string") {
+        updateSong(songTitle);
+        updateArtist(songAuthor);
+      }
     } else {
       const songTitle = target.querySelector("#song-title")?.innerHTML;
       const songAuthor = target.querySelector("#song-author")?.innerHTML;
 
-      console.log(songTitle, " - Title");
-      console.log(songAuthor, " - Author");
+      if (typeof songTitle === "string" && typeof songAuthor === "string") {
+        updateSong(songTitle);
+        updateArtist(songAuthor);
+      }
     }
 
     console.log(target);

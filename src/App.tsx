@@ -8,18 +8,26 @@ interface ICurrentlyPlayingProps {
 }
 
 export function App(): JSX.Element {
-  const [currentSong, setCurrentSong] = useState<string>("Initial song");
+  const [currentSong, setCurrentSong] = useState<string>("");
+  const [currentArtist, setCurrentArtist] = useState<string>("");
 
-  function updateCurrentSong(newSong: string) {
+  const updateCurrentSong = (newSong: string) => {
     setCurrentSong(newSong);
-  }
+  };
+
+  const updateCurrentArtist = (newArtist: string) => {
+    setCurrentArtist(newArtist);
+  };
 
   return (
     <>
       <Navbar />
       <div className="content">
-        <Playlist />
-        <CurrentlyPlaying song="If Tomorrow Never Comes" artist="Wage War" />
+        <Playlist
+          updateSong={updateCurrentSong}
+          updateArtist={updateCurrentArtist}
+        />
+        <CurrentlyPlaying song={currentSong} artist={currentArtist} />
       </div>
     </>
   );
