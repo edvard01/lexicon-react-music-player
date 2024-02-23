@@ -3,13 +3,9 @@ import { useState } from "react";
 import { Navbar } from "./Navbar";
 import { Playlist } from "./Playlist";
 
-interface ICurrentlyPlayingProps {
-  song: string;
-}
-
 export function App(): JSX.Element {
-  const [currentSong, setCurrentSong] = useState<string>("");
-  const [currentArtist, setCurrentArtist] = useState<string>("");
+  const [currentSong, setCurrentSong] = useState<string>("Song Title");
+  const [currentArtist, setCurrentArtist] = useState<string>("Artist");
 
   const updateCurrentSong = (newSong: string) => {
     setCurrentSong(newSong);
